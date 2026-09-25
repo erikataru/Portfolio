@@ -1,108 +1,118 @@
-# Erika's portfolio
+# Erika Ojanperä — Portfolio
 
-A simple portfolio website built with [Hugo](https://gohugo.io/) and published
-on GitHub Pages. All text lives in plain Markdown files, so you can update the
-site without touching any code.
+A one-page portfolio site built with [Hugo](https://gohugo.io/), designed to
+be published for free on GitHub Pages. All the page's text lives in plain
+data files, so you can update the site without touching any HTML or code.
 
 ## Where things are
 
 ```
-hugo.toml                  ← Site settings: name, tagline, email, social links, menu
-content/
-  _index.md                ← Front page heading and intro text
-  about.md                 ← About page
-  contact.md               ← Contact page
-  projects/
-    _index.md              ← Intro text on the "Work" page
-    sample-project-one/    ← One folder per project
-      index.md             ←   project text and settings
-      cover.svg            ←   project images (cover and any others)
-static/images/avatar.svg   ← Profile picture on the front page
-assets/css/main.css        ← Colours, fonts and layout
-layouts/                   ← HTML templates (no need to edit for content changes)
-.github/workflows/hugo.yml ← Automatic publishing to GitHub Pages
+data/
+  profile.yaml        ← Name, hero text, bio paragraphs, "super powers" notes, key stats
+  vision.yaml         ← The three beliefs + closing statement
+  projects.yaml       ← Projects & Achievements (Consulting, Business Development, Marketing)
+  testimonials.yaml   ← "In their own words" quotes
+  contact.yaml        ← Contact details shown in the closing section
+
+static/
+  images/profile.jpg  ← Profile photo shown in the hero
+  css/style.css       ← Colors, fonts, spacing — the visual design
+  js/site.js          ← The background line-drawing effect + mobile menu behavior
+
+content/_index.md     ← Page title (front matter only, no visible text)
+hugo.toml             ← Site title, description, and base URL
+layouts/              ← HTML templates (only edit these to change structure, not text)
+.github/workflows/    ← Automatic publishing to GitHub Pages
 ```
+
+**To update the words on the page, you only ever need to edit the files in
+`data/`.** They're YAML files: plain text with a `key: "value"` on each line,
+or a list of `- "items"`. Indentation matters — keep new lines aligned with
+the ones around them.
 
 ## Editing content
 
-Each Markdown file starts with a settings block between `---` lines (called
-"front matter"), followed by the page text written in
-[Markdown](https://www.markdownguide.org/cheat-sheet/).
+### Name, hero text, bio, and key stats
 
-### Change your name, tagline, email or social links
+Edit `data/profile.yaml`:
 
-Edit `hugo.toml`. Every setting has a comment explaining it. To add another
-social link, copy a `[[params.social]]` block and change the `name` and `url`.
+- `name_lines` — the two lines of the big hero title (first name / last name).
+- `tagline` — the line under the name (e.g. "Human-Centered Strategist").
+- `hero_cta` — the button text and which section it scrolls to.
+- `nav` — the menu at the top. Each entry needs a `label` and an `anchor`
+  matching a section id (`bio`, `vision`, `projects`, `about`, `contact`).
+- `bio_paragraphs` — the introduction text. Add or remove `- "..."` lines to
+  add or remove paragraphs.
+- `field_notes` — the "Any super powers?" / "How about work-life balance?"
+  notes. Add a new `question` / `answer` pair to add another one.
+- `key_stats` — the big numbers (e.g. "10+ Organizations transformed"). Add,
+  remove, or edit entries freely.
 
-### Change the front page text
+### The "Vision" section (three beliefs)
 
-Edit `content/_index.md`. `heading` is the big title; the text below the
-`---` is the introduction. `featuredCount` sets how many projects are shown.
+Edit `data/vision.yaml`. Each belief has a `number`, `title`, and `text`.
+Add, remove, or reorder them, and edit `closing` for the line shown below.
 
-### Change the profile picture
+### The "Projects & Achievements" section
 
-Put your photo in `static/images/` (e.g. `static/images/erika.jpg`) and update
-`avatar = "images/erika.jpg"` in `hugo.toml`. A square image works best.
+Edit `data/projects.yaml`. Each entry under `categories` is one numbered
+block. Inside a category you can use:
 
-### Edit the About or Contact page
+- `cases` — a detailed write-up with **Challenge / My role / Impact** (used
+  for the Consulting category).
+- `achievements` — a simpler entry with just a `name` and one paragraph of
+  `text` (used for Business Development and Marketing).
+- `additional` — an optional short list of extra `company` + `description`
+  pairs, shown at the end of the category.
 
-Edit `content/about.md` or `content/contact.md`. The email button on the
-Contact page uses the `email` in `hugo.toml`.
+A category doesn't need all three — leave out whichever it doesn't use. To
+add a fourth category, copy an existing one (from `- number: "0X"` to the
+next `- number:`) and edit its contents; give it a new `number`.
 
-### Add a new project
+### Testimonials
 
-1. Create a new folder in `content/projects/`, e.g. `content/projects/cafe-branding/`.
-   The folder name becomes the page address (`/projects/cafe-branding/`), so use
-   lowercase letters and hyphens.
-2. Copy `index.md` from one of the sample projects into it (or run
-   `hugo new content projects/cafe-branding/index.md`).
-3. Put the images in the same folder, e.g. `cover.jpg`, `photo-1.jpg`.
-4. Edit `index.md`:
-   - `title` – project name
-   - `summary` – one line shown on the project card
-   - `tags` – labels, e.g. `["Branding", "Print"]`
-   - `cover` – file name of the cover image in this folder
-   - `weight` – display order (1 is shown first)
-   - `draft: true` hides the project from the published site
-5. Add more images in the text with `![Description of image](photo-1.jpg)`.
+Edit `data/testimonials.yaml`. Add or remove a `- "..."` line under `quotes`
+for each testimonial. They're shown in the order listed.
 
-Cover images are shown in a 3:2 ratio. Keep images under ~500 KB (around
-2000 px wide is plenty) so the site stays fast.
+### Contact details
 
-### Remove a project
+Edit `data/contact.yaml` — email, phone, LinkedIn, the heading, and the short
+line above it.
 
-Delete its folder in `content/projects/`, or set `draft: true` to hide it.
-Remember to delete the three sample projects once you've added real ones.
+### Profile photo
 
-### Change the menu
+Replace `static/images/profile.jpg` with a new image (keep the same file
+name, or update `photo:` in `data/profile.yaml` if you rename it). A portrait
+(taller than wide) photo works best — the frame crops to a 3:4 shape.
 
-Edit the `[[menus.main]]` blocks in `hugo.toml`. To add a new page, create
-`content/my-page.md` and add a menu entry with `pageRef = "/my-page"`.
+### Colors and fonts
 
-### Change colours and fonts
-
-Edit the variables at the top of `assets/css/main.css`. The first block is the
-light theme, the second is used when the visitor's device is in dark mode.
-Fonts are loaded from Google Fonts in `layouts/baseof.html`.
+Open `static/css/style.css` and look at the top of the file, inside `:root`.
+Every color used on the site is defined once there as a named value (e.g.
+`--brand`, `--accent`, `--surface`) — change a value there and it updates
+everywhere it's used. There's a second set of colors further down for dark
+mode (`prefers-color-scheme: dark`), used automatically when a visitor's
+device is set to dark mode.
 
 ## Previewing locally
 
-Install Hugo (on macOS: `brew install hugo`), then run in this folder:
+Install Hugo (on macOS: `brew install hugo`), then from this folder run:
 
 ```bash
 hugo server
 ```
 
-Open the address it prints (e.g. http://localhost:1313/erika-portfolio/). The
-page reloads automatically when you save a file. Press `Ctrl+C` to stop.
-Drafts can be previewed with `hugo server -D`.
+Open the address it prints (e.g. `http://localhost:1313/erika-portfolio/`).
+The page reloads automatically whenever you save a file.
 
 ## Publishing to GitHub Pages
 
-One-time setup:
+This repo already includes a GitHub Actions workflow
+(`.github/workflows/hugo.yml`) that builds and publishes the site
+automatically. One-time setup:
 
-1. Create a new repository on GitHub (e.g. `erika-portfolio`).
-2. In this folder, run:
+1. Create a new, empty repository on GitHub — for example `erika-portfolio`.
+2. In this folder, initialize git and push:
    ```bash
    git init -b main
    git add .
@@ -110,18 +120,23 @@ One-time setup:
    git remote add origin https://github.com/USERNAME/erika-portfolio.git
    git push -u origin main
    ```
-3. On GitHub, open the repository's **Settings → Pages** and under
-   **Build and deployment → Source** choose **GitHub Actions**.
+3. On GitHub, open the repository's **Settings → Pages**, and under
+   **Build and deployment → Source**, choose **GitHub Actions**.
 
-After that, every push to the `main` branch publishes the site automatically
-in a minute or two (progress is visible under the repository's **Actions**
-tab). The site will be at `https://USERNAME.github.io/erika-portfolio/`.
+That's it — every push to `main` rebuilds and republishes the site within a
+minute or two (progress is visible under the repository's **Actions** tab).
+The site will be live at `https://USERNAME.github.io/erika-portfolio/`.
 
-Editing directly on GitHub also works: open a file on github.com, click the
-pencil icon, edit and commit — the site updates automatically. You can also
-drag and drop images into a project folder with **Add file → Upload files**.
+The workflow automatically sets the correct site address at build time, so
+you don't need to touch `baseURL` in `hugo.toml` for this to work. It's only
+used for local `hugo` builds outside of GitHub Actions — update it if you
+ever set up a custom domain (see below).
+
+**Editing directly on GitHub also works:** open a file (e.g.
+`data/profile.yaml`) on github.com, click the pencil icon to edit it, and
+commit the change — the site rebuilds and updates automatically.
 
 ### Custom domain (optional)
 
-Add the domain under **Settings → Pages → Custom domain** and set `baseURL` in
-`hugo.toml` to your domain, e.g. `baseURL = "https://erika.com/"`.
+Add the domain under **Settings → Pages → Custom domain**, and update
+`baseURL` in `hugo.toml` to match, e.g. `baseURL = "https://erikaojanpera.com/"`.

@@ -1,0 +1,15 @@
+<header class="hero" id="top">
+  <canvas class="hero-bg" data-contour="hero" data-seed="7" aria-hidden="true"></canvas>
+  <div class="wrap hero-inner">
+    <div class="hero-grid">
+      <div>
+        <h1>{{ delimit .Site.Data.profile.name_lines "<br>" | safeHTML }}</h1>
+        <p class="hero-position">{{ .Site.Data.profile.tagline }}</p>
+        <a class="hero-cta" href="#{{ .Site.Data.profile.hero_cta.anchor }}">{{ .Site.Data.profile.hero_cta.text }} ↓</a>
+      </div>
+      <div class="photo-frame">
+        <img src="{{ .Site.Data.profile.photo | relURL }}" alt="{{ .Site.Data.profile.photo_alt }}">
+      </div>
+    </div>
+  </div>
+</header>

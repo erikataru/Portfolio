@@ -1,0 +1,17 @@
+# ---------------------------------------------------------------
+# Closing "Contact" section (the dark band at the bottom of the page).
+# ---------------------------------------------------------------
+
+eyebrow: "Get in touch"
+heading: "Let's connect."
+subtext: "Based in Helsinki, working across Finland and remotely beyond."
+
+email: "erikaojanpera95@gmail.com"
+
+phone: "+358 40 555 3514"
+phone_href: "tel:+358405553514"   # no spaces, used for the tel: link
+
+linkedin: "linkedin.com/in/erikaojanpera"
+linkedin_url: "https://linkedin.com/in/erikaojanpera"
+
+copyright: "© 2026 Erika Ojanperä."

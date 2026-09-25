@@ -1,0 +1,59 @@
+# ---------------------------------------------------------------
+# Front page content: name, hero, intro text, and quick facts.
+# ---------------------------------------------------------------
+
+name: "Erika Ojanperä"
+
+# The name as it's displayed in the big hero title. Each line becomes
+# its own line on the page (keep it to first name / last name).
+name_lines:
+  - "Erika"
+  - "Ojanperä"
+
+tagline: "Human-Centered Strategist"
+
+# Profile photo. Put the image file in static/images/ and reference
+# it here (path relative to static/).
+photo: "images/profile.jpg"
+photo_alt: "Erika Ojanperä"
+
+# Button under the hero text.
+hero_cta:
+  text: "See how I work"
+  anchor: "vision"   # scrolls to the section with this id
+
+# Menu at the top of the page. "anchor" must match a section id
+# (bio, vision, projects, about, contact).
+nav:
+  - label: "Bio"
+    anchor: "bio"
+  - label: "Vision"
+    anchor: "vision"
+  - label: "Projects"
+    anchor: "projects"
+  - label: "About"
+    anchor: "about"
+  - label: "Contact"
+    anchor: "contact"
+
+# Introduction paragraphs, shown left of the "Any super powers?" notes.
+# Add or remove paragraphs freely — each list item is its own paragraph.
+bio_paragraphs:
+  - "I am a strategic organizational developer with an entrepreneurial mindset who ensures the smooth execution of projects through effective and human-centric solutions, aiming for a collaborative and learning-driven way of working."
+  - "My broad and diverse background offers me the versatility to create value across different roles and organizational contexts, and allows me to connect the dots between strategy, people, and execution — making me well suited to roles covering strategy and change consulting, business development, project management, and other client-facing roles. My experience in data analysis and AI tools also gives me the tech-savvy touch needed in today's world of work."
+
+# Short Q&A notes shown on the right side of the intro.
+field_notes:
+  - question: "Any super powers?"
+    answer: "Yes — my superpowers are emotional intelligence, lightning-fast learning, and a great sense of humor. I'm deeply curious about human interaction and what it takes to bring out the best in people through visionary leadership, and forever passionate about promoting diversity and employee wellbeing to drive social sustainability and competitive advantage."
+  - question: "How about work-life balance?"
+    answer: "I'm a keen believer in work-life balance and being driven by curiosity in all areas of life. Outside of the office you'll find me practicing partner acrobatics and other sports, exploring the outdoors, or getting my hands dirty with climate & animal rights activism."
+
+# Big numbers shown below the intro. Add or remove entries freely.
+key_stats:
+  - value: "10+"
+    label: "Organizations transformed"
+  - value: "2+"
+    label: "Years in change management & strategy development"
+  - value: "3+"
+    label: "Years of startup experience"

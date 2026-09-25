@@ -1,48 +1,6 @@
-# ---------------------------------------------------------------
-# Site settings — edit the values below to change site-wide info.
-# ---------------------------------------------------------------
-
-# The GitHub Actions workflow overrides this automatically when deploying,
-# so you only need to change it if you use a custom domain.
-baseURL = "https://example.github.io/erika-portfolio/"
+baseURL = "https://your-username.github.io/erika-portfolio/"
 languageCode = "en-us"
-title = "Erika — Portfolio"
-
-# Tags are shown as labels only; no separate tag pages are generated
-disableKinds = ["taxonomy", "term"]
+title = "Erika Ojanperä"
 
 [params]
-  # Shown in the header, hero and footer
-  name = "Erika"
-  tagline = "Designer & maker"
-  description = "Portfolio of Erika — selected work, projects and contact details."
-  email = "hello@example.com"
-  # Profile picture shown on the home page (file in static/images/)
-  avatar = "images/avatar.svg"
-
-# Social links shown in the footer. Add, remove or reorder freely.
-[[params.social]]
-  name = "LinkedIn"
-  url = "https://www.linkedin.com/"
-[[params.social]]
-  name = "Instagram"
-  url = "https://www.instagram.com/"
-
-# Top navigation. "weight" controls the order.
-[menus]
-  [[menus.main]]
-    name = "Work"
-    pageRef = "/projects"
-    weight = 10
-  [[menus.main]]
-    name = "About"
-    pageRef = "/about"
-    weight = 20
-  [[menus.main]]
-    name = "Contact"
-    pageRef = "/contact"
-    weight = 30
-
-[markup.goldmark.renderer]
-  # Allow raw HTML inside Markdown files
-  unsafe = true
+  description = "Erika Ojanperä — human-centered strategist. Strategy consulting, business development, and project management."

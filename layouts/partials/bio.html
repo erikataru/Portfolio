@@ -1,0 +1,22 @@
+<section id="bio" class="wrap">
+  <div class="about-grid">
+    <div class="about-copy">
+      {{ range .Site.Data.profile.bio_paragraphs }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </div>
+    <div class="field-notes">
+      {{ range .Site.Data.profile.field_notes }}
+      <div class="field-note">
+        <p class="field-q">{{ .question }}</p>
+        <p class="field-a">{{ .answer }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  <dl class="key-stats">
+    {{ range .Site.Data.profile.key_stats }}
+    <div class="key-stat"><dt class="key-stat-value">{{ .value }}</dt><dd class="key-stat-label">{{ .label }}</dd></div>
+    {{ end }}
+  </dl>
+</section>

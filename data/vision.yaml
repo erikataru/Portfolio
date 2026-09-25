@@ -1,0 +1,21 @@
+# ---------------------------------------------------------------
+# "Vision" section — the three beliefs and the closing statement.
+# ---------------------------------------------------------------
+
+heading: "I believe in three things."
+
+# Add, remove, or reorder beliefs freely. "number" is just a label
+# (it doesn't have to be sequential, but 01/02/03 reads best).
+beliefs:
+  - number: "01"
+    title: "People are at the center of any change"
+    text: "Even the best strategy or solution will struggle if people don't understand it, see its value, or know how to use it."
+  - number: "02"
+    title: "We can't change what we don't understand"
+    text: "Impactful change starts with creating a shared understanding of the challenge, the context, and the direction we're heading."
+  - number: "03"
+    title: "The best solution isn't the perfect one, it's the one that works"
+    text: "Rather than having the most ideal solution, progress comes from practical solutions that can be implemented, tested, learned from, and improved."
+
+# One closing line shown below the three beliefs.
+closing: "Whether it's strategy consulting, change management, business development, or communications — I believe successful execution starts and ends with people."

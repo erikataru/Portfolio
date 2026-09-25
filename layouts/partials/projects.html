@@ -1,0 +1,56 @@
+<section id="projects" class="wrap">
+  <div class="section-head">
+    <h2>{{ .Site.Data.projects.heading }}</h2>
+  </div>
+
+  {{ range .Site.Data.projects.categories }}
+  <article class="category">
+    <div class="category-head">
+      <div>
+        <span class="category-num">{{ .number }}</span>
+        <h3 class="category-title">{{ .title }}</h3>
+        <p class="category-subtitle">{{ .subtitle }}</p>
+      </div>
+    </div>
+
+    <div class="category-desc">
+      {{ range .description }}
+      <p>{{ . }}</p>
+      {{ end }}
+    </div>
+
+    {{ if .cases }}
+    <p class="selected-head">Achievements</p>
+    {{ range .cases }}
+    <div class="case-block">
+      <h4 class="case-name">{{ .name }}</h4>
+      <dl class="case-fields">
+        <div class="case-field"><dt>Challenge</dt><dd>{{ .challenge }}</dd></div>
+        <div class="case-field"><dt>My role</dt><dd>{{ .role }}</dd></div>
+        <div class="case-field"><dt>Impact</dt><dd>{{ .impact }}</dd></div>
+      </dl>
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ if .achievements }}
+    <p class="selected-head">Achievements</p>
+    {{ range .achievements }}
+    <div class="achievement">
+      <h4>{{ .name }}</h4>
+      <p>{{ .text }}</p>
+    </div>
+    {{ end }}
+    {{ end }}
+
+    {{ if .additional }}
+    <p class="additional-head">{{ .additional_intro }}</p>
+    <ul class="add-list">
+      {{ range .additional }}
+      <li><span class="add-co">{{ .company }}</span> — {{ .description }}</li>
+      {{ end }}
+    </ul>
+    {{ end }}
+  </article>
+  {{ end }}
+</section>

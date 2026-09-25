@@ -1,9 +1,0 @@
-{{ define "main" }}
-<header class="page-head">
-  <h1>{{ .Title }}</h1>
-  {{ .Content }}
-</header>
-<div class="grid">
-  {{ range .Pages }}{{ partial "project-card.html" . }}{{ end }}
-</div>
-{{ end }}

@@ -1,0 +1,76 @@
+# ---------------------------------------------------------------
+# "Projects & Achievements" section.
+#
+# Each item under "categories" is one numbered block (01, 02, 03 ...).
+# A category can list its achievements in two ways — use whichever
+# fits, or mix both in the same category:
+#
+#   cases:         a detailed case study with Challenge / My role / Impact
+#   achievements:  a simpler entry with just a name and one paragraph
+#
+# A category can also end with an "additional" list — a short
+# company + one-line description, shown as a compact two-column list.
+# Leave out "cases", "achievements" or "additional" entirely if a
+# category doesn't need them.
+# ---------------------------------------------------------------
+
+heading: "Projects & Achievements"
+
+categories:
+  - number: "01"
+    title: "Consulting"
+    subtitle: "Strategy, Change & Organizational Development"
+    description:
+      - "I have experience in strategy development, change management, process development, and facilitation across different organizations and industries. My approach combines human-centered research, analytical thinking, strategic perspective, and practical implementation. I have worked with both large organizations and smaller companies, taking responsibility for everything from research and analysis to workshop design, facilitation, project management, and implementation."
+      - "I draw on my earlier experience in business analysis, research, and data-driven development to bring an analytical perspective to my consulting work. At the same time, my extensive experience in facilitation helps me turn insights into shared understanding and meaningful action. I am comfortable taking ownership in ambiguous environments and approaching challenges with an entrepreneurial mindset — figuring out what needs to be done and driving it forward independently."
+    cases:
+      - name: "KPMG — Human-centered strategy development"
+        challenge: "Developing a new strategy in a complex organizational situation, where creating understanding and commitment across the organization was essential for successful implementation."
+        role: "I contributed throughout the strategy process — conducting interviews, analyzing organizational and customer research, developing the strategy, and designing and facilitating workshops. I also sparred with client teams in their strategy development work."
+        impact: "Through deep organizational and customer research, we developed a strategy that was clearer and easier for people to understand and relate to, creating a stronger foundation for implementation."
+      - name: "Wärtsilä — Strategic ways of working & OKRs"
+        challenge: "Supporting Product Owners in developing their strategic capabilities and applying strategy in their everyday work."
+        role: "Together with a colleague, I designed and delivered a development program focused on strategic thinking and OKRs — responsible in particular for workshop design, facilitation, and ensuring the new ways of working were translated into everyday practice."
+        impact: "The project was initially delivered to one team. Following positive client feedback and results, the engagement was expanded to four teams."
+    additional_intro: "Additional consulting projects, where I have contributed in:"
+    additional:
+      - company: "Neste"
+        description: "process development"
+      - company: "Lapti"
+        description: "user research study"
+      - company: "Oilon"
+        description: "process development"
+      - company: "Aker Arctic"
+        description: "strategy development"
+      - company: "Kemira"
+        description: "process development"
+      - company: "DNA"
+        description: "process development"
+      - company: "Pyhäjärvi-instituutti"
+        description: "staff development days facilitation"
+      - company: "Ahlsell"
+        description: "process development"
+
+  - number: "02"
+    title: "Business Development"
+    subtitle: "Turning Ideas Into Structured Processes & Ways of Working"
+    description:
+      - "My business development experience combines strategic thinking with hands-on execution. I have developed services and internal ways of working, coordinated development projects, implemented OKRs, and worked directly with customers and stakeholders. I enjoy turning ambiguous development needs into concrete structures, services, and solutions that people can actually use."
+    achievements:
+      - name: "Academy of Brain — OKR implementation & service development"
+        text: "I coordinated business and service development projects and led the implementation of an OKR model into the company's development work. I also mapped and structured the company's service portfolio, making the overall offering more visible and understandable across the organization."
+      - name: "Academy of Brain — Facilitation services"
+        text: "I was responsible for developing and delivering the company's team facilitation offering. I designed and facilitated customer sessions and developed the service together with the business — including an independently created and launched webinar-style discussion concept for HR leaders, where I acted as project lead, product owner, speaker, and facilitator, taking the concept from idea to execution."
+      - name: "Junction — Team leading and process development"
+        text: "As Head of Participants, I led a five-person team and was responsible for the participant experience, marketing and communications, budget, application process, and its technical development. Together with the Tech Lead, I significantly automated and improved the application process — for the first time, all applications could be reviewed, making the process more efficient and equal."
+
+  - number: "03"
+    title: "Marketing & Communications"
+    subtitle: "Making Marketing More Strategic, Systematic & Engaging"
+    description:
+      - "Alongside my consulting and business development work, I have supported organizations in developing and executing their marketing and communications. This has included strategic marketing planning, content creation, social media, communications, WordPress, and data analysis — combining a strategic understanding of the business with hands-on execution."
+    achievements:
+      - name: "ICG Innotiimi — Strategic marketing development"
+        text: "I contributed to developing marketing into a more strategic and systematic function — including marketing planning, social media, communications, WordPress, data analysis, and collaboration across the international ICG network. This helped align marketing activities more closely with strategy, and led to the introduction of podcasts into our marketing content."
+      - name: "Academy of Brain — Marketing & customer experience"
+        text: "Alongside service and business development, I worked with social media, communications, customer experience, and the marketing of digital learning services — gaining hands-on experience connecting customer needs, content, and business objectives, and improving the service portfolio through graphic design."

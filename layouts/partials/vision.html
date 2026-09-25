@@ -1,0 +1,17 @@
+<section id="vision" class="wrap">
+  <div class="section-head">
+    <h2>{{ .Site.Data.vision.heading }}</h2>
+  </div>
+  <div class="beliefs-list">
+    {{ range .Site.Data.vision.beliefs }}
+    <div class="belief">
+      <span class="belief-num">{{ .number }}</span>
+      <div>
+        <h3 class="belief-title">{{ .title }}</h3>
+        <p>{{ .text }}</p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <p class="beliefs-closing">{{ .Site.Data.vision.closing }}</p>
+</section>
