@@ -47,7 +47,10 @@
     <p class="additional-head">{{ .additional_intro }}</p>
     <ul class="add-list">
       {{ range .additional }}
-      <li><span class="add-co">{{ .company }}</span> — {{ .description }}</li>
+      <li>
+        <span class="add-co">{{ .company }}</span>
+        {{ if .description }} — {{ if .url }}<a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .description }}</a>{{ else }}{{ .description }}{{ end }}{{ end }}
+      </li>
       {{ end }}
     </ul>
     {{ end }}
